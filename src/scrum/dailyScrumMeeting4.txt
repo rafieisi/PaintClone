@@ -1,0 +1,50 @@
+# Fill in, commit and push each day.
+# Group Member: Sina Rafiei
+Nov 2, 2016
+	Yesterday :
+	Today     :
+	Obstacles :
+	
+Nov 3, 2016
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 4, 2016
+	Yesterday :Nothing
+	Today     : Planned Sprint
+	Obstacles :
+
+Nov 5, 2016
+	Yesterday :planned sprint
+	Today     :Worked on Bug 3 and Bug 4 and implemented the shape super class
+				-created the drawStrategy and drawCircle
+				-created squiggle class
+	Obstacles :-choosing the right design pattern to make the code simpler 
+			   -implementing the design patterns in the correct position
+
+Nov 6, 2016
+	Yesterday :Worked on Bug 3 and Bug 4 and implemented the shape super class
+				-created the drawStrategy and drawCircle
+				-created squiggle class
+	Today     :circle feedback,implemented the squiggle shape class
+				-shape attribute
+				-simple design panel
+	Obstacles :
+	
+Nov 7, 2016
+	Yesterday :circle feedback,implemented the squiggle shape class
+				-shape attribute
+				-simple design panel
+	Today     :userStory 7 & 8
+	Obstacles :reenabiling the undo and redo buttons were difficult
+	
+Nov 8, 2016
+	Yesterday :userStory 7 & 8
+	Today     :Bug9,Bug10,UserStory 15
+	Obstacles :
+	
+Nov 9, 2016
+	Yesterday :Bug9,Bug10,UserStory 15
+	Today     :Commenting and checking the program
+	Obstacles :

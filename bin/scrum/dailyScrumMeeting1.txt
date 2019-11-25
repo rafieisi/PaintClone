@@ -1,0 +1,41 @@
+# Fill in, commit and push each day.
+# Group Member: Juan Castaneda
+Nov 2, 2016
+	Yesterday :
+	Today     :
+	Obstacles :
+	
+Nov 3, 2016
+	Yesterday :
+	Today     :
+	Obstacles :
+
+Nov 4, 2016
+	Yesterday :Nothing
+	Today     : Planned Sprint, sorted out git issues.
+	Obstacles :
+
+Nov 5, 2016
+	Yesterday : fixed git issues
+	Today     : Implement factory design pattern in PaintPanel
+	Obstacles : Unsure if squiggle and/or point should be shapes
+
+Nov 6, 2016
+	Yesterday : Implemented Factory design and expanded on Shape inheritance which was implemented by another member
+	Today     : Fix some issues with Bugs 3 and 5, and user story 2 that another member had implemented, finalize the architechture of the program
+	Obstacles : getting some group members to understand how to use the architechture
+	
+Nov 7, 2016
+	Yesterday :Fixed circle feedback and some architecture design problems
+	Today     : Improve architecture by having shapes draw themselves. Add and complete user story for polyline.
+	Obstacles :
+	
+Nov 8, 2016
+	Yesterday : Implemented Shapes draw themselves, helped others with issues they were having
+	Today     : Finish Polyline and eraser user stories
+	Obstacles : Git issues
+	
+Nov 9, 2016
+	Yesterday : Spent hours resolving multiple git issues, completed a buggy version of polyline
+	Today     : Complete polyline and documentation for all classes. Finalize Sprint 1.
+	Obstacles :

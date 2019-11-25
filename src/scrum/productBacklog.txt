@@ -1,0 +1,346 @@
+# User Stories/Bugs (add as appropriate), modify at each Sprint Planning Meeting
+# If a USER STORY is large, break it into smaller user stories.
+# For example, the color chooser user story involves: 
+# 1 Color chooser UI (which could be a USER STORY)
+# 2 Implementation of selected color into the drawing stream.
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY 13
+NAME     : Eraser and BAckground color
+OWNER    : Juan
+PRIORITY : 25
+ESTIMATE : 1 hours
+AS A     : user
+I WANT   : To be able to select the background color and erase parts of my drawing
+           
+SO THAT  : I have other options for the background color, and can erase without erasing the background color
+--------------------------------------------------------------------------
+
+
+
+# COMPLETED USER STORIES/BUGS BELOW ###########################################
+--------------------------------------------------------------------------
+TYPE     : BUG 1
+NAME     : Icons instead of text for drawing mode selection
+OWNER    : Marko
+PRIORITY : 11
+ESTIMATE : 1 hour.
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 2
+NAME     : Drawing selection mode not indicated
+OWNER    : Marko
+PRIORITY : 12
+ESTIMATE : 2 hours
+ISSUE    : Currently ,you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is JButton correct, is there a way
+           to highlight the currently selected mode?
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 3
+NAME     : Architecture behind choosing selection mode is poor
+OWNER    : Juan
+PRIORITY : 2
+ESTIMATE : 3 hours
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 4
+NAME     : Architecture behind Model is poor
+OWNER    : Sina
+PRIORITY : 1
+ESTIMATE : 3 hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 5
+NAME     : Squiggle is broken
+OWNER    : Sina/Arslan
+PRIORITY : 3
+ESTIMATE : 2 hour
+ISSUE    : Squiggles are connected to each other by a straight line. Each drag
+		   of the mouse should be a separate squiggle. Possibly
+           the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 6
+NAME     : Circle drawing is broken
+OWNER    : Marko(edited by Sina and Juan)
+PRIORITY : 4
+ESTIMATE : 1 hour
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 7
+NAME     : Shapes should draw themselves to avoid if statements in PaintPanel
+OWNER    : Juan
+PRIORITY : 13
+ESTIMATE : 1 hour.
+ISSUE    : Code not as simple as it should be
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 8
+NAME     : Shapes don't need type attribute and inheritance not being used properly(for thickness, position, etc)
+OWNER    : Juan
+PRIORITY : 14
+ESTIMATE : 1 hour.
+ISSUE    : Code not as simple as it should be
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 9
+NAME     : undo and redo does not function properly
+OWNER    : Sina
+PRIORITY : 21
+ESTIMATE : 1 hour.
+ISSUE    : undo and redo clear everything
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 10
+NAME     : New paint
+OWNER    : Sina Rafiei
+PRIORITY : 22
+ESTIMATE : 1 hour.
+ISSUE    : new PaintPanel should pop up when new is pressed 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG 11
+NAME     : Polyline is broken
+OWNER    : Juan
+PRIORITY : 24
+ESTIMATE : 2 hours
+ISSUE    : Can't make a new polyline without first drawing a new (different) shape, then
+			switching back to polyline
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 1
+NAME     : Draw Circle
+OWNER    : Marko
+PRIORITY : 4
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 2
+NAME     : Draw Circle Feedback
+OWNER    : Sina and Juan
+PRIORITY : 6
+ESTIMATE : 2 hours (over estimate)
+AS A     : user
+I WANT   : As a user is specifying a Circle, during the drag, a 'current'
+           circle should be on display. As the user drags, the 'current'
+           circle changes in real time so that a circle is drawn with
+           centre at users initial circle click, with radius out to
+           the current dragged mouse position.
+SO THAT  : I can see the circle I am about to build on release of the mouse
+           button.
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY 3
+NAME     : Draw Rectangle
+OWNER    : Arslan
+PRIORITY : 5
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to 
+		   specify two corners of a rectangle to be drawn in the current style.
+SO THAT  : I can add rectangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 4
+NAME     : Draw Rectangle Feedback
+OWNER    : Arslan
+PRIORITY : 7
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : Similarly to Draw Circle Feedback, display the rectangle in mid construction.
+SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 5
+NAME     : Color selector
+OWNER    : Marko
+PRIORITY : 8
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example: 
+           		selects color red 
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 6
+NAME     : Fill style selector
+OWNER    : Marko
+PRIORITY : 9
+ESTIMATE : 4 hours
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or outline), to be applied
+           to subsequent shapes. Example: 
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 7
+NAME     : Line thickness selector
+OWNER    : Marko
+PRIORITY : 10
+ESTIMATE : 3 hours
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline 
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined 
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 8
+NAME     : Undo any action
+OWNER    : Sina Rafiei
+PRIORITY : 17
+ESTIMATE : 3 hours
+AS A     : user
+I WANT   : To click on the the undo in the edit tab 
+SO THAT  : so that i can undo any drawing i have done
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 9
+NAME     : Draw Polyline
+OWNER    : Juan
+PRIORITY : 15
+ESTIMATE : 1 hours
+AS A     : user
+I WANT   : To be able to draw a strait line from one point to another
+           
+SO THAT  : I don't have to try to draw straight lines that come out crappy
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 10
+NAME     : Draw Square
+OWNER    : Arslan
+PRIORITY : 16
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : To click on one corner of a square, drag, and release to 
+		   specify two corners of a square to be drawn in the current style.
+		   Note: due to the way PaintPanel is implemented, completing this user story
+		   also completes draws square feedback
+SO THAT  : I can add square to my canvas and can see square on real time 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 11
+NAME     : New paint
+OWNER    : Sina Rafiei
+PRIORITY : 
+ESTIMATE : 3 hours
+AS A     : user
+I WANT   : Start over again
+SO THAT  : so that i can completely start again because my previous painting 
+			were all crap
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 12
+NAME     : RGB Sliders
+OWNER    : Marko
+PRIORITY : 19
+ESTIMATE : 3 hours
+AS A     : user
+I WANT   : Any color you like
+SO THAT  : Picky people can choose their favorite crap color
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 14
+NAME     : Redo any action
+OWNER    : Sina Rafiei
+PRIORITY : 18
+ESTIMATE : 2 hours
+AS A     : user
+I WANT   : Redo any undone shapes
+SO THAT  : so that i can have back any shapes i regret undoing
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY 15
+NAME     : Clear
+OWNER    : Sina Rafiei
+PRIORITY : 19
+ESTIMATE : 1 hours
+AS A     : user
+I WANT   : To be able to clear everything done
+           
+SO THAT  : so that i can start over again
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 16
+NAME     : Add more basic color and better implementation, implemented exit button in menu bar  
+OWNER    : Arslan
+PRIORITY : 23
+ESTIMATE : 1 hours
+AS A     : user
+I WANT   : To be able to select the color and to be able to different shapes.           
+SO THAT  : I have more basic color in the panel, and user have more choices
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY 17
+NAME     : Fill Icon
+OWNER    : Marko
+PRIORITY : 20
+ESTIMATE : 1 hour
+AS A     : user
+I WANT   : Dynamically change fill icon
+SO THAT  : User can easily see the fill
+----------------------------------------------------------------------------
+
+# OMITTED USER STORIES/BUGS BELOW   ###########################################
+

@@ -1,0 +1,17 @@
+# Please leave your team members contact information here
+
+Member 1: 
+Name: Juan Castaneda
+Email: juan.castaneda@mail.utoronto.ca
+
+Member 2:
+Name: Arslan Qamar
+Email:arslan.qamar@mail.utoronto.ca
+
+Member 3: 
+Name: Marko Spajic
+Email: marko.spajic@mail.utoronto.ca
+
+Member 4:
+Name: Sina Rafiei
+Email: sina.rafiei@mail.utoronto.ca
